@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./dist/main.js" defer></script>
+        <script
+            src="https://kit.fontawesome.com/f8db91ad57.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="index.css" />
+        <link
+            rel="shortcut icon"
+            href="./public/password.ico"
+            type="image/x-icon"
+        />
+        <title>Gerador de Senhas</title>
+    </head>
+    <body>
+        <nav>
+            <img src="./public/logo.png" alt="Logo" />
+            <h1 class="heading">Gerador de Senhas Cral!</h1>
+            <i class="fa-solid fa-circle-exclamation"></i>
+        </nav>
+        <section>
+            <h1 class="heading">Formulário de geração</h1>
+            <form action="">
+                <div class="upperForm">
+                    <div class="sulfixPrefix">
+                        <div class="prefix">
+                            <h3 class="heading">Prefixo:</h3>
+                            <label for="togglePrefix" class="checkbox">
+                                <input
+                                    type="checkbox"
+                                    name="togglePrefix"
+                                    id="TogglePrefix"
+                                />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label for="prefix">
+                                <input
+                                    type="text"
+                                    name="prefix"
+                                    id="Prefix"
+                                    class="input-style"
+                                    disabled
+                                />
+                            </label>
+                        </div>
+                        <div class="sulfix">
+                            <h3 class="heading">Sulfixo:</h3>
+                            <label for="toggleSulfix" class="checkbox">
+                                <input
+                                    type="checkbox"
+                                    name="toggleSulfix"
+                                    id="ToggleSulfix"
+                                />
+                                <span class="checkmark"></span>
+                            </label>
+                            <label forsulfixlabel>
+                                <input
+                                    type="text"
+                                    name="sulfix"
+                                    id="Sulfix"
+                                    class="input-style"
+                                    disabled
+                                />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="separator">
+                        <h3 class="heading">Separador</h3>
+                        <select name="separator" id="Separator" disabled>
+                            <option value="" selected disabled hidden>
+                                Selecionar...
+                            </option>
+                            <option value="_">Sublinhado</option>
+                            <option value="-">Hífen</option>
+                            <option value="@">Arroba</option>
+                            <option value="#">Hashtag</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="passwordSelection">
+                    <div class="input-container">
+                        <label for="symbols" class="symbols checkbox">
+                            <input
+                                type="checkbox"
+                                name="symbols"
+                                id="Symbols"
+                                required
+                            />
+                            <span class="checkmark"></span>
+                        </label>
+                        <h3 class="heading">Símbolos</h3>
+                    </div>
+                    <div class="input-container">
+                        <label for="letters" class="letters checkbox">
+                            <input
+                                type="checkbox"
+                                name="letters"
+                                id="Letters"
+                                required
+                            />
+                            <span class="checkmark"></span>
+                        </label>
+                        <h3 class="heading">Letras</h3>
+                    </div>
+                    <div class="input-container">
+                        <label for="Numbers" class="numbers checkbox">
+                            <input
+                                type="checkbox"
+                                name="numbers"
+                                id="Numbers"
+                                required
+                            />
+                            <span class="checkmark"></span>
+                        </label>
+                        <h3 class="heading">Números</h3>
+                    </div>
+                </div>
+                <div class="length">
+                    <h3 class="heading">Tamanho do Hash:</h3>
+                    <input
+                        type="text"
+                        name="length"
+                        id="Length"
+                        class="input-style"
+                        required
+                    />
+                </div>
+                <button id="GeneratePassword" class="btn" type="submit">
+                    Gerar Senha!
+                </button>
+            </form>
+            <article id="PasswordBox">
+                <div class="passwordHeading">
+                    <h2 class="heading">Aqui está sua senha!</h2>
+                    <i class="fa-solid fa-copy" id="Copy" title="Copiar"></i>
+                </div>
+                <h4></h4>
+            </article>
+            <article id="ErrorBox">
+                <h4></h4>
+            </article>
+        </section>
+    </body>
+</html>
